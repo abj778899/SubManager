@@ -277,7 +277,7 @@ class SubscriptionParser {
             }
         }
 
-        var config: [String: Any] = [
+        let config: [String: Any] = [
             "mixed-port": 7890,
             "allow-lan": true,
             "mode": "rule",
