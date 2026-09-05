@@ -28,7 +28,6 @@ struct Node: Codable, Identifiable, Hashable {
     var udp: Bool = true
     var skipCertVerify: Bool = false
     var latency: Int?
-    var rawConfig: [String: Any]?
 
     enum CodingKeys: String, CodingKey {
         case id, name, type, server, port, password, uuid, cipher, network, sni, wsPath, wsHost, tls, udp, skipCertVerify, latency
@@ -99,7 +98,7 @@ struct Node: Codable, Identifiable, Hashable {
 
         case "vmess":
             let uuidStr = uuid ?? ""
-            var dict: [String: Any] = [
+            let dict: [String: Any] = [
                 "v": "2",
                 "ps": name,
                 "add": server,
