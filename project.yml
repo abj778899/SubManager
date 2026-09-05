@@ -1,0 +1,28 @@
+name: SubManager
+options:
+  bundleIdPrefix: com.submanager
+  deploymentTarget:
+    iOS: "14.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    IPHONEOS_DEPLOYMENT_TARGET: "14.0"
+    TARGETED_DEVICE_FAMILY: "1,2"
+
+targets:
+  SubManager:
+    type: application
+    platform: iOS
+    sources:
+      - path: SubManager
+    info:
+      path: SubManager/Info.plist
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.submanager.app
+        INFOPLIST_FILE: SubManager/Info.plist
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: ""
+        ENABLE_PREVIEWS: YES
