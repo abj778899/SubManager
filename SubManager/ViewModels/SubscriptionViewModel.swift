@@ -1,5 +1,6 @@
 import Foundation
 import Combine
+import UIKit
 
 class SubscriptionViewModel: ObservableObject {
     @Published var subscriptions: [Subscription] = []
